@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/sponsors",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1705,
+      "bodyTextHash": "ec2ec604ecdf3760bc017529c779e425d1c092ef33421fa2a7f7746509297b36",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify Partn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-sponsors.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1683,
+      "bodyTextHash": "a9b36ec550937e00e4675224dfa8db003bbd2263924aafb08e8ace5d12ea7469",
+      "bodyTextPrefix": "Skip to content LiftIQ FUTURE SPONSORSHIP Put your name on the l",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-sponsors-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-sponsors.json"
+}

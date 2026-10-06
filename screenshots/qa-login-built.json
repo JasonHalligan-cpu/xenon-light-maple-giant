@@ -1,0 +1,41 @@
+{
+  "url": "http://127.0.0.1:8081/login",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 637,
+      "bodyTextHash": "d9618de7c9ac79a8787a942f5d481941cbcfe05d58f3b17b34815e8f7613b73b",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lessons Practice Test Codes Specify S",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-login-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 609,
+      "bodyTextHash": "49a8f7d7de21245278665976fa9f732131729445772fad1281253d13de8889dc",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Sign in Lobby EU regulations ASME reg",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-login-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-login-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text changed (523 -> 637 chars, hash mismatch)",
+    "mobile: body text changed (495 -> 609 chars, hash mismatch)"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/practice",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 911,
+      "bodyTextHash": "5f9fd30f0f30cf527e46a6528c7ecc80f2bf09fae863fddec24ff1d9e95551ab",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lessons Practice Test Codes Specify S",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-mode-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 937,
+      "bodyTextHash": "e77d1c7338a27e27aba9c32fa1f2255f78a15d86b37bedd6dff874363848128a",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lobby EU regulations ASME regulations",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-mode-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-mode-built.json"
+}

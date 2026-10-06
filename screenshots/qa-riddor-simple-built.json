@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/library/riddor",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1254,
+      "bodyTextHash": "6919ddebd7a80f175f38033d9a7cd87f97eae5bb0ce6b4e5ad2c5eb671e3749e",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lessons Practice Test Codes Specify S",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-riddor-simple-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1226,
+      "bodyTextHash": "a4ac29db0221147b29a127993c2da826af6c6c4cf50e50331c06edb53078dfe3",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lobby EU regulations ASME regulations",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-riddor-simple-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-riddor-simple-built.json"
+}

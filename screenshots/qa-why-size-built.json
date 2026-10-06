@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/uk",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 3104,
+      "bodyTextHash": "b6b5cc24c2cd6bde5aac0ad24b3cbaefb85561f4d64a97cf5a83afc1ef472e5c",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lessons Practice Test Codes Specify S",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-why-size-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 3076,
+      "bodyTextHash": "56a487ed7e981be1d62eebeb8018df5d21e359e45f5cc145f410ea85a3845943",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lobby EU regulations ASME regulations",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-why-size-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-why-size-built.json"
+}

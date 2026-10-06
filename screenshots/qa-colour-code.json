@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/library/en81-76",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 2132,
+      "bodyTextHash": "38a10bfe7ca9405fba271ade603845382fc5a0dfb4825227ceddbb7a997b0d0a",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lobby Floors Practice Codes Specify P",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-colour-code.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 2110,
+      "bodyTextHash": "4687e20e7bf742e0b394528d5b7085d8504f20273ae4bb7101eb7a33cf803bac",
+      "bodyTextPrefix": "Skip to content ElevatorIQ EN 81-76:2025 A lift that can get you",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-colour-code-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-colour-code.json"
+}

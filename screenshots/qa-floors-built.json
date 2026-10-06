@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/learn",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 2532,
+      "bodyTextHash": "1fce25488e5823a0138dc1dfe5cb51b154d8f6d9abdbe700e7481490964fd826",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify Partn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-floors-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 2510,
+      "bodyTextHash": "cf034e0448c333c23e58caa38b13e768aa512d3c3d4d32ab91dbfc92a6d43595",
+      "bodyTextPrefix": "Skip to content LiftIQ CURRICULUM One floor at a time Each lesso",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-floors-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-floors-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

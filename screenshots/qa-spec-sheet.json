@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/specs/firefighter",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 2348,
+      "bodyTextHash": "0eff68805336746b64bc0118cec7af80cd7643d3700f9600b3b1ad9055c86621",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify Partn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-spec-sheet.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 2326,
+      "bodyTextHash": "0c553da00be50d66cdb35d3030a9df702520fc701da2b6e452947d69ee3fcbb8",
+      "bodyTextPrefix": "Skip to content LiftIQ All specifications EN 81-72 · THE BRIGADE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-spec-sheet-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-spec-sheet.json"
+}

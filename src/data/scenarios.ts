@@ -1,0 +1,247 @@
+import type { Scenario } from "./types";
+
+export const SCENARIOS: Scenario[] = [
+  {
+    id: "hotel-alarm",
+    title: "Midnight on the 7th floor",
+    role: "Night manager",
+    setting: "A 9-storey hotel. One passenger elevator, EN 81-20 + 70 Type 2, with 73 fire behaviour. No 76 elevator. A guest who uses a wheelchair is in 704.",
+    skillIds: ["en81-73", "compare", "en81-76-purpose"],
+    beats: [
+      {
+        prompt: "The fire alarm sounds. A colleague suggests sending the elevator to 7 to collect the guest. What do you do?",
+        choices: [
+          {
+            text: "Call the elevator to 7. Speed matters more than the standard.",
+            correct: false,
+            feedback:
+              "That standard elevator is under 73. It should recall and park. Sending it back into the building is asking an unprotected car to be something it is not.",
+          },
+          {
+            text: "Let the elevator recall and park. Start the refuge / assistance plan for 704. Do not sell the standard elevator as a way out.",
+            correct: true,
+            feedback:
+              "Right. 73 parks. The guest needed a management plan (refuge, trained help, evacuation chair) because this building never bought 76.",
+          },
+          {
+            text: "Tell the guest to use the elevator anyway — Type 2 means it is an evacuation elevator.",
+            correct: false,
+            feedback:
+              "Type 2 is an accessibility size, not an evacuation mode. 70 is getting in on Tuesday. 76 is getting out on the bad night.",
+          },
+        ],
+      },
+      {
+        prompt: "In the debrief, the owner asks if they can ‘turn on EN 81-76’ in the controller this quarter.",
+        choices: [
+          {
+            text: "Yes — 76 is a software flag on any Type 2 car.",
+            correct: false,
+            feedback: "76 is additional hardware, protected landings, power behaviour, signs, and a new elevator. Not a flag.",
+          },
+          {
+            text: "No. 76 is for new elevators with building-side protection. Improve the assistance plan now; specify 76 when the elevator is replaced.",
+            correct: true,
+            feedback:
+              "Honest. You can drill the night team tomorrow. You cannot wish a 2025 evacuation elevator into a 73 controller.",
+          },
+        ],
+      },
+    ],
+    debrief:
+      "Most buildings you walk into tonight are still 73 buildings. The kindness is a drilled plan, not a fantasy about the car.",
+  },
+  {
+    id: "spec-swap",
+    title: "The substitution in the meeting",
+    role: "Access consultant",
+    setting: "A 15-storey office. Fire strategy already requires a firefighters elevator. The elevator contractor offers ‘one dual-purpose car, Class A 76, cheaper than 72+76’.",
+    skillIds: ["compare", "en81-76-class", "en81-72"],
+    beats: [
+      {
+        prompt: "Class A instead of a firefighters elevator. Your note to the fire engineer?",
+        choices: [
+          {
+            text: "Accept — 76 is newer so it supersedes 72.",
+            correct: false,
+            feedback: "76 does not supersede 72. Class A is not intended where a firefighters elevator is required.",
+          },
+          {
+            text: "Reject the swap. 72 is the fire brigade’s tool. 76 is civilian way-out. This height likely needs 72; 76 would be extra, and not Class A.",
+            correct: true,
+            feedback: "That is the meeting you were hired for. Complementary, not flavours.",
+          },
+          {
+            text: "Accept Class A if they paint it red.",
+            correct: false,
+            feedback: "Colour is not a standard.",
+          },
+        ],
+      },
+      {
+        prompt: "They return with Class B 76 plus a separate 72 car. Remote-assisted 76, control room staffed 08:00–18:00.",
+        choices: [
+          {
+            text: "Ask what happens at 18:01. If the building occupies at night, automatic or a real out-of-hours roster has to be in the strategy.",
+            correct: true,
+            feedback:
+              "Remote is a person. Persons go home. Automatic is the only independent mode. Write the hours into the fire strategy or change the mode.",
+          },
+          {
+            text: "Office hours are enough for any office.",
+            correct: false,
+            feedback: "Cleaners, late engineers, overnight fit-out — someone is always in a 15-storey office.",
+          },
+        ],
+      },
+    ],
+    debrief:
+      "The expensive mistake is buying one car for two jobs it cannot hold. The cheap mistake is a mode that nobody is awake to run.",
+  },
+  {
+    id: "care-home",
+    title: "Who is driving",
+    role: "Facilities lead, care home",
+    setting: "New three-storey care home. No firefighters elevator required. One exit level. Generator not in the budget. Residents who cannot use stairs on every floor.",
+    skillIds: ["en81-76-class", "en81-76-modes", "en81-76-building"],
+    beats: [
+      {
+        prompt: "Class and power?",
+        choices: [
+          {
+            text: "Class A is on the table: one EEL, no firefighter-elevator trigger, no secondary power — but only if automatic rescue to the EEL on mains failure is real.",
+            correct: true,
+            feedback: "That is the Class A box. The ‘if’ is the whole job: rescue to the exit floor when the lights die.",
+          },
+          {
+            text: "Class B, because care homes always need remote video.",
+            correct: false,
+            feedback:
+              "They might choose B, but it is not forced by the occupancy label. Remote forces B. A staffed building might prefer driver-assisted on A or B.",
+          },
+        ],
+      },
+      {
+        prompt: "Night staffing is two people. The architect favours driver-assisted only.",
+        choices: [
+          {
+            text: "Driver-assisted only means those two people cannot also fight a fire and carry someone. Bargain for automatic as well, or prove the drill with numbers.",
+            correct: true,
+            feedback:
+              "At least one mode is required; more than one is allowed. Automatic is the only independent mode. In a care home, staff are already busy.",
+          },
+          {
+            text: "Two staff is plenty to drive every resident out in one car.",
+            correct: false,
+            feedback: "Do the arithmetic: car size, number of residents, time, one driver occupied. Automatic exists because this fantasy fails.",
+          },
+        ],
+      },
+    ],
+    debrief:
+      "Class A can be honest here. Mode choice is a staffing choice. Write it as a number of people, not as a product name.",
+  },
+  {
+    id: "old-town-hall",
+    title: "The listed shaft",
+    role: "Dutyholder",
+    setting: "1890 town hall, 1998 hydraulic elevator, no two-way alarm, 800 mm hinged landing door, last thorough examination 11 months ago.",
+    skillIds: ["existing", "dutyholder", "en81-70"],
+    beats: [
+      {
+        prompt: "First phone call?",
+        choices: [
+          {
+            text: "Order EN 81-76 conversion.",
+            correct: false,
+            feedback: "Wrong decade, wrong standard, and you are overdue on LOLER.",
+          },
+          {
+            text: "Book the overdue thorough examination today. In parallel, start an 80/82 survey: alarm, doors, access. 76 only when you replace.",
+            correct: true,
+            feedback: "Diary first. Then ranked hazards. Then a replacement specification that can actually include 76.",
+          },
+          {
+            text: "Put a refuge chair in the lobby and forget the elevator.",
+            correct: false,
+            feedback: "Aids help. They do not close a missing alarm or a late examination.",
+          },
+        ],
+      },
+      {
+        prompt: "A councillor wants Type 1 ‘because it is existing’ on the replacement.",
+        choices: [
+          {
+            text: "Type 1 is only when the building truly cannot take Type 2. Measure the well. Public buildings should be fighting for Type 2 or 3.",
+            correct: true,
+            feedback: "Existing-building Type 1 is a constraint argument, not a preference. 21 may help a new car into an old well without shrinking the people.",
+          },
+          {
+            text: "Type 1 is fine for civic buildings.",
+            correct: false,
+            feedback: "A wheelchair user attending a meeting should not have to leave their companion in the lobby.",
+          },
+        ],
+      },
+    ],
+    debrief:
+      "Old buildings are 80, 82, 21, LOLER — and only then a new 20+70+76 conversation. Sequence is the skill.",
+  },
+  {
+    id: "water-on-four",
+    title: "Water on four",
+    role: "Elevator engineer on call",
+    setting: "A 72 firefighter elevator in a tower. Fire on 4. Fire brigade using the car. Reports of water in the well.",
+    skillIds: ["en81-72", "compare"],
+    beats: [
+      {
+        prompt: "The facilities manager wants the elevator isolated ‘because water and electricity’.",
+        choices: [
+          {
+            text: "Isolate immediately — any water means stop.",
+            correct: false,
+            feedback:
+              "A 72 elevator is designed for water from firefighting. Isolating it without the fire service asking may take away their tool.",
+          },
+          {
+            text: "Do not freelance an isolation. 72 assumes hose water. Talk to the incident commander. Watch pit level and faults; they decide if the tool is still theirs.",
+            correct: true,
+            feedback: "You are the machine’s doctor, not the incident commander. 72’s IP ratings and drainage exist for this hour.",
+          },
+        ],
+      },
+    ],
+    debrief:
+      "72 without water management is a brochure. 72 with water in the well is a Tuesday.",
+  },
+  {
+    id: "signage",
+    title: "Two posters, one lobby",
+    role: "Building manager",
+    setting: "Mixed core: one 73 passenger elevator, one 76 Class B automatic, one 72. Tenants keep taking the wrong car in drills.",
+    skillIds: ["compare", "en81-76-building", "en81-73"],
+    beats: [
+      {
+        prompt: "Fix the lobby.",
+        choices: [
+          {
+            text: "One generic ‘elevators OK in fire’ poster over all three doors.",
+            correct: false,
+            feedback: "That puts people into the 73 car, which will park, and into the 72 car, which is not theirs.",
+          },
+          {
+            text: "Three different stories: 73 keeps the old ‘do not use’ message; 76 gets the evacuation elevator sign (at least 40 × 40 mm) and voice; 72 is marked for fire service. Drill it.",
+            correct: true,
+            feedback: "Signage is a control. 76 even sizes the pictogram. Training is the rest of the control.",
+          },
+        ],
+      },
+    ],
+    debrief:
+      "If the landing does not tell the truth, the standard never reaches the person it was written for.",
+  },
+];
+
+export const SCENARIO_BY_ID = Object.fromEntries(
+  SCENARIOS.map((s) => [s.id, s]),
+) as Record<string, Scenario>;

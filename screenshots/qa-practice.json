@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/practice",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 727,
+      "bodyTextHash": "f69ced6f9aa1d67e413ae82d1daf82bb45407e913c5a7499e2d6a2c9cb5ad5f2",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lobby Floors Practice Codes Specify P",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-practice.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 705,
+      "bodyTextHash": "6ac02f9099684ae5a171aa1254d028c528c3223088618bc3af6724d785a1be5c",
+      "bodyTextPrefix": "Skip to content ElevatorIQ QUESTIONS ONLY No reading. Just the q",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-practice-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-practice.json"
+}

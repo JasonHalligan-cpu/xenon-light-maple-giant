@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 4054,
+      "bodyTextHash": "e502225fec07e41660e81f3559e39cfe3f74b200a5e98a973e219f4375d90cff",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify Partn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-standard.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 4032,
+      "bodyTextHash": "89086b30766ea602400e8defcc3ce8d6e65c73fc4af39f1719beb07ac827ed5d",
+      "bodyTextPrefix": "Skip to content LiftIQ ONE LIFT · UK LAW Call this lift. Then le",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-standard-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-standard.json"
+}

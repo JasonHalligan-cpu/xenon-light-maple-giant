@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/adverts",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1269,
+      "bodyTextHash": "4511dd80cc646bc18427a2ba78ffcd42ca5f33a21421b7a64a1b9b667f1bef0b",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify Partn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-adverts.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1247,
+      "bodyTextHash": "c76330772ec8f792791c105650e748adbde4b69ec6bb37724d300d91509af8d3",
+      "bodyTextPrefix": "Skip to content LiftIQ SIMULATED ADVERTS Pretend brands, real sl",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-adverts-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-adverts.json"
+}

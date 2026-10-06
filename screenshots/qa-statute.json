@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/library/en81-73",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1275,
+      "bodyTextHash": "adf4f1d725294849ba8fcd0c2ba9c53e26ec1324d2f548f2e30290b0b91d5f30",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify Partn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-statute.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1253,
+      "bodyTextHash": "3a35d3879b9aa201226e3e0d1a2a37d63245781853f97586da40af77b1692d8b",
+      "bodyTextPrefix": "Skip to content LiftIQ EN 81-73 What a normal lift does when the",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-statute-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-statute.json"
+}

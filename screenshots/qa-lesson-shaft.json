@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/learn/family",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1768,
+      "bodyTextHash": "0f9e12f46c87b74d4cba9f7472012f5068bb694cb356028946f21b5e5e915251",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify Partn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-lesson-shaft.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1746,
+      "bodyTextHash": "6938e80a051a599abeb818c20aea87247f4dbf424e824dd47e9893ea815b3813",
+      "bodyTextPrefix": "Skip to content LiftIQ ORIENTATION · 6 MIN A map of the shaft EN",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-lesson-shaft-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-lesson-shaft.json"
+}

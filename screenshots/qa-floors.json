@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/learn",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 2579,
+      "bodyTextHash": "d7939b8d20221f24f0848382445d77551d95aaa332324dca100bc74cba2b5373",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lobby Floors Practice Codes Specify P",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-floors.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 2557,
+      "bodyTextHash": "9b7eb77ee1ef03a97a5397ad1d32a874c35301ee107410f32f64e07797d057be",
+      "bodyTextPrefix": "Skip to content ElevatorIQ CURRICULUM One floor at a time Each f",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-floors-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-floors.json"
+}

@@ -1,0 +1,1 @@
+var e=[`q-duty-1`,`q-duty-2`,`q-reg-puwer`,`q-reg-fire`,`q-reg-eq`,`q-reg-riddor`,`q-reg-mach`,`q-reg-cdm`,`q-reg-wah`,`q-reg-28`,`q-cmp-2`,`q-73-1`];export{e as t};

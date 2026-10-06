@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/asme",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 3384,
+      "bodyTextHash": "616c65405ef4a3bff040282b8556e0937ad5bc42f61f171530fa7cefe15fc395",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Overview Lessons Practice Test Codes ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/asme-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 3356,
+      "bodyTextHash": "95f905b7969de72dc44babdc8a405a04d4b19b823845b7c1116d4952f2fc31f9",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lobby EU regulations ASME regulations",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/asme-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/asme-built.json"
+}

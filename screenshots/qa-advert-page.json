@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/adverts/ashcombe",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 953,
+      "bodyTextHash": "8543a3de45603b659a0db51dbc95e2f73f1b29fdef46c294f3e1f01a0641df0e",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify Partn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-advert-page.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 931,
+      "bodyTextHash": "56a2d64916a9cfd2da4ef819af52d7b63fd4d345b7834ece7be6f90d6462335a",
+      "bodyTextPrefix": "Skip to content LiftIQ ADVERTISEMENT · SIMULATED · SHEFFIELD Ash",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-advert-page-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-advert-page.json"
+}

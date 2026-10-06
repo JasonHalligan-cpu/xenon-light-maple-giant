@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/library/en81-73",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1283,
+      "bodyTextHash": "78baced58e8a2520d93aba73597870c3c08234f08f0504cc385b590b27365ee8",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lobby Floors Practice Codes Specify P",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-visual-code.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1261,
+      "bodyTextHash": "139066a40470ad016bb5de279d67fcd252a88ac4edce0c3aa32d5686712df935",
+      "bodyTextPrefix": "Skip to content ElevatorIQ EN 81-73 What a normal lift does when",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-visual-code-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-visual-code.json"
+}

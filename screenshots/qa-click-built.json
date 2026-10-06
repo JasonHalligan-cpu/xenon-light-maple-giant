@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 3994,
+      "bodyTextHash": "7cac52316b1d7ae469c39180ddbaf188f74783c929bf4773bd9b0ba8505e7b8c",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lobby Floors Practice Codes Specify P",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-click-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ElevatorIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 3972,
+      "bodyTextHash": "b52c340e827d392c58603aba7ecfa5d90e1f1475dddd582cda478c5e10b1acc8",
+      "bodyTextPrefix": "Skip to content ElevatorIQ ONE LIFT · UK LAW Call this lift. The",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-click-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-click-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 3139,
+      "bodyTextHash": "5ea61a163c6dab4fab7ea7fae3627f0df4cd3c7deec84154d42f0a64312bbbae",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify UK Sc",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-nomagenta.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 3126,
+      "bodyTextHash": "5700592b21ad3c1d7131d80d02f9faaeb6aaa7dc64f56bf0e33cb0891a73c5b6",
+      "bodyTextPrefix": "Skip to content LiftIQ UK LIFT-LAW ACADEMY The law in the shaft.",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-nomagenta-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-nomagenta.json"
+}

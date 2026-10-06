@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ElevatorIQ clip</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #000; color: #f5e27a; font-family: system-ui, sans-serif; }
+    body { display: grid; place-items: center; }
+    video {
+      width: min(100vw, calc(100vh * 16 / 9));
+      height: auto;
+      max-height: 100vh;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #000;
+    }
+    a { position: fixed; top: 12px; left: 12px; color: #f5e27a; }
+  </style>
+</head>
+<body>
+  <a href="/">Back to ElevatorIQ</a>
+  <video src="/clip-v17.mp4" autoplay loop playsinline controls></video>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/specs",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1396,
+      "bodyTextHash": "390a6e9823abd5bfa72e2e7034424a90a14699d6502149e7971de6a8ecd21688",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify Partn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-specs.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 1374,
+      "bodyTextHash": "1d261633d2f77225ec705f62350fd603029351e943b3830b92b677c70aee92a1",
+      "bodyTextPrefix": "Skip to content LiftIQ SPECIFICATION SHEETS Write the machine, n",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-specs-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-specs.json"
+}

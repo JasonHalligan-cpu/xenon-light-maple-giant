@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/library/en81-76",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 2878,
+      "bodyTextHash": "0698c3a8be6c816c2006233232cf9877efe29e79e7f3e608af287b4d564c6e64",
+      "bodyTextPrefix": "Skip to content LiftIQ Lobby Floors Practice Codes Specify Partn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-plain-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "LiftIQ",
+      "hasCanvas": false,
+      "bodyTextLen": 2856,
+      "bodyTextHash": "b19af24887f6011b43ce76fb7aef2404291975ffd5e97b05fae737b50a07f84e",
+      "bodyTextPrefix": "Skip to content LiftIQ EN 81-76:2025 A lift that can get you out",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/qa-plain-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/qa-plain-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
