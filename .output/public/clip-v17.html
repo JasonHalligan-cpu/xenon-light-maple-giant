@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ElevatorIQ clip</title>
+  <style>
+    html, body { margin: 0; min-height: 100%; background: #000; color: #f5e27a; font-family: system-ui, sans-serif; }
+    .back { position: fixed; top: 12px; left: 12px; color: #f5e27a; z-index: 2; }
+    .bar { display: flex; gap: 8px; justify-content: center; padding: 16px 12px 8px; }
+    button, nav a {
+      min-height: 48px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 999px;
+      background: #f5e27a;
+      color: #111;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    video {
+      width: 100%;
+      height: calc(100vh - 180px);
+      object-fit: contain;
+      background: #000;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      padding: 12px;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+  <a class="back" href="/">Back</a>
+  <div class="bar">
+    <button type="button" id="play">Play</button>
+    <button type="button" id="mute">Mute</button>
+  </div>
+  <video id="clip" src="/clip-linkedin.mp4?v=4" loop playsinline></video>
+  <nav>
+    <a download="elevatoriq-linkedin.mp4" href="/clip-linkedin.mp4?v=4">Download LinkedIn</a>
+    <a download="elevatoriq-instagram.mp4" href="/clip-instagram.mp4?v=4">Download Instagram Reel</a>
+    <a download="elevatoriq-instagram-feed.mp4" href="/clip-instagram-feed.mp4?v=4">Download Instagram feed</a>
+  </nav>
+  <script>
+    const v = document.getElementById("clip");
+    const play = document.getElementById("play");
+    const mute = document.getElementById("mute");
+    v.volume = 1;
+    v.muted = false;
+    play.onclick = () => {
+      if (v.paused) {
+        v.play();
+        play.textContent = "Pause";
+      } else {
+        v.pause();
+        play.textContent = "Play";
+      }
+    };
+    mute.onclick = () => {
+      v.muted = !v.muted;
+      v.volume = v.muted ? 0 : 1;
+      mute.textContent = v.muted ? "Unmute" : "Mute";
+      if (v.paused) {
+        v.play();
+        play.textContent = "Pause";
+      }
+    };
+  </script>
+</body>
+</html>

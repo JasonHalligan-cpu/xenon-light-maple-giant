@@ -170,7 +170,12 @@ export default defineConfig(({ command, isPreview }) => ({
     ...(command === "build" || isPreview
       ? [
           nitro({
-            preset: "vercel",
+            // Vercel is the Grok publish target. Hostinger's Node app expects
+            // Nitro's node-server output (.output/server/index.mjs). Set
+            // HOSTINGER=1 or NITRO_PRESET=node-server for that build.
+            preset:
+              process.env.NITRO_PRESET ||
+              (process.env.HOSTINGER ? "node-server" : "vercel"),
             // Auto-registers server/middleware/* (the PWA install page +
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.
