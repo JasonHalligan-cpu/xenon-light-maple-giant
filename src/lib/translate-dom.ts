@@ -2,11 +2,28 @@ const originals = new WeakMap<Text, string>();
 const applied = new Set<string>();
 const ATTRS = ["alt", "aria-label", "placeholder", "title"] as const;
 const attrOriginal = new WeakMap<Element, Partial<Record<(typeof ATTRS)[number], string>>>();
+const normCache = new WeakMap<object, Map<string, string>>();
+
+function normalize(source: string) {
+  return source.replace(/\s+/g, " ").trim();
+}
+
+function normalizedDict(dict: Record<string, string>) {
+  const cached = normCache.get(dict);
+  if (cached) return cached;
+  const map = new Map<string, string>();
+  for (const [key, value] of Object.entries(dict)) {
+    const normal = normalize(key);
+    if (normal && !map.has(normal)) map.set(normal, value);
+  }
+  normCache.set(dict, map);
+  return map;
+}
 
 function lookup(dict: Record<string, string>, source: string) {
-  const trimmed = source.trim();
-  if (!trimmed) return source;
-  const hit = dict[trimmed];
+  const key = normalize(source);
+  if (!key) return source;
+  const hit = normalizedDict(dict).get(key);
   if (!hit) return source;
   const lead = source.match(/^\s*/)?.[0] ?? "";
   const trail = source.match(/\s*$/)?.[0] ?? "";

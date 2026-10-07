@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { BackLink, NextLink, PageArrows } from "@/components/layout/page-arrows";
 import { Progress } from "@/components/ui/progress";
-import { SCENARIO_BY_ID } from "@/data/scenarios";
+import { SCENARIO_BY_ID, SCENARIOS } from "@/data/scenarios";
 import { useProgress } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -30,6 +31,18 @@ function ScenarioPage() {
 
   const current = scenario.beats[beat];
   const totalBeats = scenario.beats.length;
+  const scenarioIndex = SCENARIOS.findIndex((item) => item.id === scenario.id);
+  const prevScenario = scenarioIndex > 0 ? SCENARIOS[scenarioIndex - 1] : undefined;
+  const nextScenario =
+    scenarioIndex >= 0 && scenarioIndex < SCENARIOS.length - 1
+      ? SCENARIOS[scenarioIndex + 1]
+      : undefined;
+  const arrows = (
+    <PageArrows
+      back={prevScenario ? <BackLink to="/scenarios/$id" params={{ id: prevScenario.id }} /> : null}
+      next={nextScenario ? <NextLink to="/scenarios/$id" params={{ id: nextScenario.id }} /> : null}
+    />
+  );
 
   function advance(correct: boolean) {
     const nextHits = hits + (correct ? 1 : 0);
@@ -47,6 +60,7 @@ function ScenarioPage() {
   if (finished) {
     return (
       <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+        {arrows}
         <p className="text-sm font-medium uppercase tracking-wider text-accent">
           Debrief
         </p>
@@ -72,6 +86,7 @@ function ScenarioPage() {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+      {arrows}
       <p className="text-sm font-medium uppercase tracking-wider text-accent">
         {scenario.role}
       </p>

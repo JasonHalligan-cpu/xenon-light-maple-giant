@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { StatuteSplit } from "@/components/learn/statute-split";
+import { BackLink, NextLink, PageArrows } from "@/components/layout/page-arrows";
 import { buttonVariants } from "@/components/ui/button";
 import { LIFT_SPECS, SPEC_BY_ID, type SpecId } from "@/data/specs";
 import { cn } from "@/lib/utils";
@@ -32,9 +33,17 @@ function SpecPage() {
   }
 
   const row = spec.rows.find((r) => r.item === open) ?? spec.rows[0];
+  const specIndex = LIFT_SPECS.findIndex((item) => item.id === spec.id);
+  const prevSpec = specIndex > 0 ? LIFT_SPECS[specIndex - 1] : undefined;
+  const nextSpec =
+    specIndex >= 0 && specIndex < LIFT_SPECS.length - 1 ? LIFT_SPECS[specIndex + 1] : undefined;
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+      <PageArrows
+        back={prevSpec ? <BackLink to="/specs/$id" params={{ id: prevSpec.id }} /> : null}
+        next={nextSpec ? <NextLink to="/specs/$id" params={{ id: nextSpec.id }} /> : null}
+      />
       <Link to="/specs" className="text-base text-accent hover:underline">
         All specifications
       </Link>

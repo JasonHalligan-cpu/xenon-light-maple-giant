@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { StatuteSplit } from "@/components/learn/statute-split";
+import { BackLink, NextLink, PageArrows } from "@/components/layout/page-arrows";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { LESSONS } from "@/data/lessons";
-import { STANDARD_BY_ID } from "@/data/standards";
+import { STANDARD_BY_ID, STANDARDS } from "@/data/standards";
 import type { CodeRegion, StandardId } from "@/data/types";
 import { pageHead } from "@/lib/seo";
 
@@ -47,8 +48,33 @@ export function CodePage({ id, region }: { id: string; region: CodeRegion }) {
   const relatedLessons = LESSONS.filter(
     (l) => (l.region ?? "eu") === region && l.standardIds.includes(std.id),
   );
+  const track = STANDARDS.filter((item) => (item.region ?? "eu") === region);
+  const codeIndex = track.findIndex((item) => item.id === std.id);
+  const prevCode = codeIndex > 0 ? track[codeIndex - 1] : undefined;
+  const nextCode =
+    codeIndex >= 0 && codeIndex < track.length - 1 ? track[codeIndex + 1] : undefined;
   return (
     <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+      <PageArrows
+        back={
+          prevCode ? (
+            region === "asme" ? (
+              <BackLink to="/asme/library/$id" params={{ id: prevCode.id }} />
+            ) : (
+              <BackLink to="/library/$id" params={{ id: prevCode.id }} />
+            )
+          ) : null
+        }
+        next={
+          nextCode ? (
+            region === "asme" ? (
+              <NextLink to="/asme/library/$id" params={{ id: nextCode.id }} />
+            ) : (
+              <NextLink to="/library/$id" params={{ id: nextCode.id }} />
+            )
+          ) : null
+        }
+      />
       <p className="font-mono text-xs text-accent">{std.code}</p>
       <h1 className="mt-2 font-display text-4xl font-semibold text-pretty sm:text-5xl">
         {std.everydayTitle}

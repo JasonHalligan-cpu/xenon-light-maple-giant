@@ -111,6 +111,31 @@ export function pickQuestions(opts: {
   return picked;
 }
 
+export function pickLatamQuestions<T extends { id: string }>(opts: {
+  questions: readonly T[];
+  mastery: Record<string, number>;
+  sm2: Record<string, Sm2Card>;
+  recentIds: string[];
+  slug: string;
+  now?: number;
+}): T[] {
+  const now = opts.now ?? Date.now();
+  const recent = new Set(opts.recentIds.slice(-2));
+  const scored = opts.questions.map((q) => {
+    const key = `${opts.slug}:${q.id}`;
+    const pL = opts.mastery[key] ?? P_L0;
+    const card = opts.sm2[`latam:${key}`];
+    const dueBoost = card && card.due <= now ? 1.45 : card ? 0.65 : 1;
+    const zone = pL > 0.2 && pL < 0.88 ? 1.2 : 0.85;
+    const weak = 1 + (1 - pL);
+    const recentPenalty = recent.has(q.id) ? 0.4 : 1;
+    const jitter = 0.92 + Math.random() * 0.16;
+    return { q, score: dueBoost * zone * weak * recentPenalty * jitter };
+  });
+  scored.sort((a, b) => b.score - a.score);
+  return scored.map((row) => row.q);
+}
+
 export const PLACEMENT_IDS = [
   "q-family-1",
   "q-duty-1",

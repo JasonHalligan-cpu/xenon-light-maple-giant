@@ -48,10 +48,8 @@ export function NeonCover({
             rules are written here in simpler terms, so the legal duty
             is easier to understand.
           </p>
-          <p className="mt-4 max-w-lg border-l-4 border-yellow pl-4 text-lg text-yellow">
-            Bayesian Knowledge Tracing is the primary method. Each answer updates
-            how likely it is you already know that rule. A miss is not a score.
-            The rule comes back in simpler words.
+          <p className="mt-4 max-w-lg text-base text-night-fg/80">
+            Bayesian Knowledge Tracing brings a missed rule back in simpler words.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             {!placementDone ? (
@@ -79,7 +77,7 @@ export function NeonCover({
                 "neon-box-green",
               )}
             >
-              Bayesian Knowledge Tracing
+              Practice
             </Link>
           </div>
         </div>

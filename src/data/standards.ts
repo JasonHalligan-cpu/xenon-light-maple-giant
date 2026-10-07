@@ -66,7 +66,7 @@ export const STANDARDS: Standard[] = [
     statute:
       "EN 81-21 is the part for a new elevator going into an old building that cannot give you a modern pit, headroom, or shaft size. Other protections stand in so the safety level stays level with EN 81-20. It is not a reason to leave an old car as it is.",
     plain:
-      "Old buildings were not poured around a modern elevator well. 21 is the honest compromise: extra protection (for example, retractable stops, inspection controls, reduced-clearance protection) instead of pretending you have a two-metre pit. It is for new machines in old buildings, not a free pass to keep a dangerous 1970s car.",
+      "Old buildings were not poured around a modern elevator well. 21 is the honest compromise: extra protection (for example, retractable stops, inspection controls, reduced-clearance protection) instead of pretending the pit has a modern refuge space. It is for new machines in old buildings, not a free pass to keep a dangerous 1970s car.",
     remember: [
       "Existing building, new elevator: look at 21.",
       "Existing elevator, old hazards: look at 80 and 82.",
@@ -90,7 +90,7 @@ export const STANDARDS: Standard[] = [
       "Accessible means big enough to step into: over 1 m², or over 1 m deep, or over 1.20 m high.",
       "Type A is 0.30 m/s. Type B is up to 1 m/s. Neither is EN 81-20.",
     ],
-    related: ["en81-20", "machinery", "directive"],
+    related: ["en81-20", "machinery"],
   },
   {
     id: "en81-28",
@@ -434,10 +434,10 @@ export const STANDARDS: Standard[] = [
     statute:
       "The Construction (Design and Management) Regulations 2015 apply to construction work, including the installation and substantial alteration of an elevator. Clients, designers and contractors must plan, manage and monitor the work, and designers must eliminate foreseeable risks so far as reasonably practicable.",
     plain:
-      "A pit no one can get out of, a machine room with no safe way in, a panel you can only reach from a ladder over the shaft: those are choices made on the drawing. The architect, the elevator designer and the client share them when the elevator goes in, and when it is changed in a big way. A normal repair visit is not this duty.",
+      "A pit no one can get out of, a machine room with no safe way in, a panel you can only reach from a ladder over the shaft: those are choices made on the drawing. The architect, the elevator designer and the client share them when the elevator goes in, and when it is changed. Repair and upkeep of the elevator can also be construction work, so they are planned too. Resetting a fault is not a construction project.",
     remember: [
-      "A new elevator, or a big change: this law is in the room.",
-      "A normal repair visit is not this duty.",
+      "A new elevator, or a change to one: this law is in the room.",
+      "Repair and upkeep can still be construction work. A fault reset is not.",
     ],
     related: ["hswa", "work-at-height", "directive"],
   },

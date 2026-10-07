@@ -1,0 +1,41 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { LATAM_BY_SLUG } from "@/data/latam";
+import { pageHead } from "@/lib/seo";
+
+export const Route = createFileRoute("/latam/$country/library/")({
+  head: ({ params }) => {
+    const country = LATAM_BY_SLUG[params.country];
+    return pageHead({
+      title: country ? `${country.name} codes` : "Codes",
+      description: country ? `Codes named for ${country.name}.` : "Country codes.",
+      path: `/latam/${params.country}/library`,
+    });
+  },
+  component: CountryLibrary,
+});
+
+function CountryLibrary() {
+  const { country: slug } = Route.useParams();
+  const country = LATAM_BY_SLUG[slug];
+  if (!country) return null;
+  return (
+    <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+      <p className="text-sm font-medium uppercase tracking-wider text-accent">{country.name}</p>
+      <h1 className="mt-2 font-display text-4xl font-semibold">Codes</h1>
+      <ul className="mt-8 space-y-3">
+        {country.codes.map((code) => (
+          <li key={code.id}>
+            <Link
+              to="/latam/$country/library/$id"
+              params={{ country: slug, id: code.id }}
+              className="block rounded-2xl bg-surface p-5 shadow-[var(--shadow-border)] hover:bg-raised"
+            >
+              <p className="font-mono text-sm text-yellow">{code.code}</p>
+              <p className="mt-1 font-display text-2xl font-semibold">{code.title}</p>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}

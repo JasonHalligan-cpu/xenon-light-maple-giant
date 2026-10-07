@@ -39,6 +39,17 @@ function LanguageFlag({ id }: { id: LangId }) {
       </svg>
     );
   }
+  if (id === "pt") {
+    return (
+      <svg viewBox="0 0 3 2" className={common} aria-hidden>
+        <rect width="1.2" height="2" fill="#006600" />
+        <rect x="1.2" width="1.8" height="2" fill="#FF0000" />
+        <circle cx="1.2" cy="1" r="0.42" fill="#FFCC00" />
+        <circle cx="1.2" cy="1" r="0.26" fill="#fff" />
+        <circle cx="1.2" cy="1" r="0.16" fill="#003399" />
+      </svg>
+    );
+  }
   return (
     <svg viewBox="0 0 60 30" className={common} aria-hidden>
       <clipPath id="uk-flag">
@@ -55,13 +66,14 @@ function LanguageFlag({ id }: { id: LangId }) {
   );
 }
 
-export function LobbyTabs({ current }: { current: "lobby" | "eu" | "asme" | null }) {
+export function LobbyTabs({ current }: { current: "lobby" | "eu" | "asme" | "latam" | null }) {
   const lang = useLanguage((s) => s.lang);
   const setLang = useLanguage((s) => s.setLang);
   const tabs = [
     { to: "/" as const, id: "lobby" as const, label: "Lobby" },
     { to: "/uk" as const, id: "eu" as const, label: "EU regulations" },
     { to: "/asme" as const, id: "asme" as const, label: "ASME regulations" },
+    { to: "/latam" as const, id: "latam" as const, label: "Latin America" },
   ];
 
   return (

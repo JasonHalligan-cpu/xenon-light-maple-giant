@@ -50,7 +50,13 @@ export function CodeLibrary({ region }: { region: CodeRegion }) {
           : "EU regulations. Every regulation that sits on an elevator is listed here, then the BS EN 81 parts. The Lifts Regulations say a new elevator must be safe to put on the market. LOLER is the six-month health check. The others are the duties around fire, access, work and design. Tap one."}
       </p>
 
-      {region === "eu" ? (
+      {region === "asme" ? (
+        <img
+          src="/graphics/asme-existing.jpg"
+          alt="Older elevator still in the building, the kind A17.3 is written for"
+          className="mt-8 aspect-video w-full rounded-2xl object-cover shadow-[var(--shadow-border)]"
+        />
+      ) : (
         <section className="mt-10">
           <h2 className="font-display text-2xl font-semibold">EU regulations</h2>
           <p className="mt-1 max-w-xl text-base text-muted">
@@ -74,7 +80,7 @@ export function CodeLibrary({ region }: { region: CodeRegion }) {
             <ArrowRight className="size-4" />
           </Link>
         </section>
-      ) : null}
+      )}
 
       <p className="mt-12 text-sm font-medium uppercase tracking-wider text-faint">
         {region === "asme" ? "The ASME codes" : "The regulations and the BS EN 81 parts"}

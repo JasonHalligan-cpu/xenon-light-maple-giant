@@ -80,6 +80,23 @@ function AsmePage() {
           EN 81. The words are a translation, not a substitute for the edition
           that place adopted, or for an elevator professional.
         </p>
+        <img
+          src="/graphics/asme-lobby.jpg"
+          alt="Modern North American elevator lobby"
+          className="mt-8 aspect-video w-full rounded-2xl object-cover shadow-[var(--shadow-border)]"
+        />
+        <ul className="mt-4 grid gap-3 sm:grid-cols-3">
+          {[
+            { src: "/graphics/asme-phase1.jpg", alt: "Empty elevator recalled to the lobby", cap: "Phase I" },
+            { src: "/graphics/asme-phase2.jpg", alt: "Firefighter driving the car with a key", cap: "Phase II" },
+            { src: "/graphics/asme-oeo.jpg", alt: "Wheelchair user in an occupant evacuation elevator", cap: "Occupant evacuation" },
+          ].map((shot) => (
+            <li key={shot.cap}>
+              <img src={shot.src} alt={shot.alt} className="aspect-video w-full rounded-2xl object-cover" />
+              <p className="mt-2 text-sm text-muted">{shot.cap}</p>
+            </li>
+          ))}
+        </ul>
         <ul className="mt-8 grid gap-3 sm:grid-cols-2">
           {DOORS.map((door) => (
             <li key={door.to}>

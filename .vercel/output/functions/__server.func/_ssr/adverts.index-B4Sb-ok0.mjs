@@ -1,5 +1,5 @@
 import { S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { V as ADVERTS, W as SPONSOR_BY_ID, w as AdSlot } from "./router-2O5coh7U.mjs";
+import { $ as SPONSOR_BY_ID, X as ADVERTS, j as AdSlot } from "./router-B4HJ06iu.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/adverts.index-B4Sb-ok0.js
 var import_jsx_runtime = require_jsx_runtime();
 function AdvertsPage() {

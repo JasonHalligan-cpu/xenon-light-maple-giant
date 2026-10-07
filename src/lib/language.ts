@@ -7,6 +7,7 @@ export const LANGUAGES = [
   { id: "de", label: "Deutsch" },
   { id: "es", label: "Español" },
   { id: "it", label: "Italiano" },
+  { id: "pt", label: "Português" },
 ] as const;
 
 export type LangId = (typeof LANGUAGES)[number]["id"];
@@ -31,6 +32,7 @@ const loaders: Record<Exclude<LangId, "en">, () => Promise<Record<string, string
   de: async () => (await import("@/i18n/de.json")).default,
   es: async () => (await import("@/i18n/es.json")).default,
   it: async () => (await import("@/i18n/it.json")).default,
+  pt: async () => (await import("@/i18n/pt.json")).default,
 };
 
 const cache = new Map<LangId, Record<string, string>>();

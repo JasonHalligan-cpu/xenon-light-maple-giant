@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-Cltr0gcK.js";import{p as t}from"./index-G35s0cOK.js";var n=e(),r=()=>(0,n.jsx)(t,{region:`asme`});export{r as component};

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/latam/brazil/practice",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Brazil practice",
+      "hasCanvas": false,
+      "bodyTextLen": 1017,
+      "bodyTextHash": "3a912ec8e6415393ee84c61c5535b8e4d3f1479bb4704cbe4e7779291f0b4e3d",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Overview Lessons Practice Test Codes ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/latam-br.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Brazil practice",
+      "hasCanvas": false,
+      "bodyTextLen": 989,
+      "bodyTextHash": "fa10dc9a6d6c4d6014b55771b4f2254fb58c05d722db126718f5bfe561c9ce0b",
+      "bodyTextPrefix": "Skip to content ElevatorIQ Lobby EU regulations ASME regulations",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/latam-br-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/latam-br.json"
+}

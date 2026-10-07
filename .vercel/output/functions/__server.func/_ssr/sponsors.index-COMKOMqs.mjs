@@ -2,7 +2,7 @@ import { S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-ro
 import { n as cn } from "./utils-DDI7QxNU.mjs";
 import { n as buttonVariants } from "./button-BjXN1-zk.mjs";
 import { u as ArrowRight } from "../_libs/lucide-react.mjs";
-import { G as SPONSOR_PACKAGES, U as SPONSOR_AUDIENCE, w as AdSlot } from "./router-2O5coh7U.mjs";
+import { Q as SPONSOR_AUDIENCE, et as SPONSOR_PACKAGES, j as AdSlot } from "./router-B4HJ06iu.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/sponsors.index-COMKOMqs.js
 var import_jsx_runtime = require_jsx_runtime();
 function SponsorsPage() {

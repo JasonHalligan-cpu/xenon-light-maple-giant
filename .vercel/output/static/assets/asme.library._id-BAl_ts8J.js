@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Cltr0gcK.js";import{c as t,p as n}from"./index-CcodH3D2.js";var r=e();function i(){let{id:e}=t.useParams();return(0,r.jsx)(n,{id:e,region:`asme`})}export{i as component};

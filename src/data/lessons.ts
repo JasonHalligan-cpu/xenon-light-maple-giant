@@ -397,7 +397,7 @@ export const LESSONS: Lesson[] = [
         statute:
           "The carrier is accessible where the floor area is greater than 1.0 m², or the depth is greater than 1.0 m, or the clear height is greater than 1.20 m. A carrier without a roof is accessible when the landing doors have a clear height greater than 1.20 m. Type A is limited to 0.30 m/s. Type B may run up to 1.0 m/s.",
         plain:
-          "A service lift you cannot step into is a different machine. The moment the cage is big enough to walk into — wider than a square metre, deeper than a metre, or taller than 1.20 m — it is accessible, and 31 is the part. Type A is the slow one, no faster than 0.30 m/s. Type B may go up to 1 m/s. Neither speed turns it into EN 81-20.",
+          "A service lift you cannot step into is a different machine. The moment the cage is big enough to walk into — a floor bigger than 1 m², deeper than 1 m, or taller than 1.20 m — it is accessible, and 31 is the part. Type A is the slow one, no faster than 0.30 m/s. Type B may go up to 1 m/s. Neither speed turns it into EN 81-20.",
         why: "People argue ‘it is only for goods’ after they have built a car a person can stand in. The size, not the label on the door, decides that it is accessible.",
       },
     ],

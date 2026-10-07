@@ -14,6 +14,7 @@ import { Route as AdvertsRouteImport } from './routes/adverts'
 import { Route as AsmeRouteImport } from './routes/asme'
 import { Route as ClassifyRouteImport } from './routes/classify'
 import { Route as DrillRouteImport } from './routes/drill'
+import { Route as LatamRouteImport } from './routes/latam'
 import { Route as LearnRouteImport } from './routes/learn'
 import { Route as LibraryRouteImport } from './routes/library'
 import { Route as PlacementRouteImport } from './routes/placement'
@@ -32,6 +33,8 @@ import { Route as AsmeLearnRouteImport } from './routes/asme.learn'
 import { Route as AsmeLibraryRouteImport } from './routes/asme.library'
 import { Route as AsmePracticeRouteImport } from './routes/asme.practice'
 import { Route as AsmeTestRouteImport } from './routes/asme.test'
+import { Route as LatamIndexRouteImport } from './routes/latam.index'
+import { Route as LatamCountryRouteImport } from './routes/latam.$country'
 import { Route as LearnIndexRouteImport } from './routes/learn.index'
 import { Route as LearnIdRouteImport } from './routes/learn.$id'
 import { Route as LibraryIndexRouteImport } from './routes/library.index'
@@ -46,6 +49,15 @@ import { Route as AsmeLearnIndexRouteImport } from './routes/asme.learn.index'
 import { Route as AsmeLearnIdRouteImport } from './routes/asme.learn.$id'
 import { Route as AsmeLibraryIndexRouteImport } from './routes/asme.library.index'
 import { Route as AsmeLibraryIdRouteImport } from './routes/asme.library.$id'
+import { Route as LatamCountryIndexRouteImport } from './routes/latam.$country.index'
+import { Route as LatamCountryLearnRouteImport } from './routes/latam.$country.learn'
+import { Route as LatamCountryLibraryRouteImport } from './routes/latam.$country.library'
+import { Route as LatamCountryPracticeRouteImport } from './routes/latam.$country.practice'
+import { Route as LatamCountryTestRouteImport } from './routes/latam.$country.test'
+import { Route as LatamCountryLearnIndexRouteImport } from './routes/latam.$country.learn.index'
+import { Route as LatamCountryLearnIdRouteImport } from './routes/latam.$country.learn.$id'
+import { Route as LatamCountryLibraryIndexRouteImport } from './routes/latam.$country.library.index'
+import { Route as LatamCountryLibraryIdRouteImport } from './routes/latam.$country.library.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -70,6 +82,11 @@ const ClassifyRoute = ClassifyRouteImport.update({
 const DrillRoute = DrillRouteImport.update({
   id: '/drill',
   path: '/drill',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LatamRoute = LatamRouteImport.update({
+  id: '/latam',
+  path: '/latam',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LearnRoute = LearnRouteImport.update({
@@ -162,6 +179,16 @@ const AsmeTestRoute = AsmeTestRouteImport.update({
   path: '/test',
   getParentRoute: () => AsmeRoute,
 } as any)
+const LatamIndexRoute = LatamIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LatamRoute,
+} as any)
+const LatamCountryRoute = LatamCountryRouteImport.update({
+  id: '/$country',
+  path: '/$country',
+  getParentRoute: () => LatamRoute,
+} as any)
 const LearnIndexRoute = LearnIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -232,6 +259,52 @@ const AsmeLibraryIdRoute = AsmeLibraryIdRouteImport.update({
   path: '/$id',
   getParentRoute: () => AsmeLibraryRoute,
 } as any)
+const LatamCountryIndexRoute = LatamCountryIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LatamCountryRoute,
+} as any)
+const LatamCountryLearnRoute = LatamCountryLearnRouteImport.update({
+  id: '/learn',
+  path: '/learn',
+  getParentRoute: () => LatamCountryRoute,
+} as any)
+const LatamCountryLibraryRoute = LatamCountryLibraryRouteImport.update({
+  id: '/library',
+  path: '/library',
+  getParentRoute: () => LatamCountryRoute,
+} as any)
+const LatamCountryPracticeRoute = LatamCountryPracticeRouteImport.update({
+  id: '/practice',
+  path: '/practice',
+  getParentRoute: () => LatamCountryRoute,
+} as any)
+const LatamCountryTestRoute = LatamCountryTestRouteImport.update({
+  id: '/test',
+  path: '/test',
+  getParentRoute: () => LatamCountryRoute,
+} as any)
+const LatamCountryLearnIndexRoute = LatamCountryLearnIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LatamCountryLearnRoute,
+} as any)
+const LatamCountryLearnIdRoute = LatamCountryLearnIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => LatamCountryLearnRoute,
+} as any)
+const LatamCountryLibraryIndexRoute =
+  LatamCountryLibraryIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => LatamCountryLibraryRoute,
+  } as any)
+const LatamCountryLibraryIdRoute = LatamCountryLibraryIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => LatamCountryLibraryRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -239,6 +312,7 @@ export interface FileRoutesByFullPath {
   '/asme': typeof AsmeRouteWithChildren
   '/classify': typeof ClassifyRoute
   '/drill': typeof DrillRoute
+  '/latam': typeof LatamRouteWithChildren
   '/learn': typeof LearnRouteWithChildren
   '/library': typeof LibraryRouteWithChildren
   '/placement': typeof PlacementRoute
@@ -255,6 +329,7 @@ export interface FileRoutesByFullPath {
   '/asme/library': typeof AsmeLibraryRouteWithChildren
   '/asme/practice': typeof AsmePracticeRoute
   '/asme/test': typeof AsmeTestRoute
+  '/latam/$country': typeof LatamCountryRouteWithChildren
   '/learn/$id': typeof LearnIdRoute
   '/library/$id': typeof LibraryIdRoute
   '/scenarios/$id': typeof ScenariosIdRoute
@@ -262,6 +337,7 @@ export interface FileRoutesByFullPath {
   '/sponsors/$id': typeof SponsorsIdRoute
   '/adverts/': typeof AdvertsIndexRoute
   '/asme/': typeof AsmeIndexRoute
+  '/latam/': typeof LatamIndexRoute
   '/learn/': typeof LearnIndexRoute
   '/library/': typeof LibraryIndexRoute
   '/scenarios/': typeof ScenariosIndexRoute
@@ -269,8 +345,17 @@ export interface FileRoutesByFullPath {
   '/sponsors/': typeof SponsorsIndexRoute
   '/asme/learn/$id': typeof AsmeLearnIdRoute
   '/asme/library/$id': typeof AsmeLibraryIdRoute
+  '/latam/$country/learn': typeof LatamCountryLearnRouteWithChildren
+  '/latam/$country/library': typeof LatamCountryLibraryRouteWithChildren
+  '/latam/$country/practice': typeof LatamCountryPracticeRoute
+  '/latam/$country/test': typeof LatamCountryTestRoute
   '/asme/learn/': typeof AsmeLearnIndexRoute
   '/asme/library/': typeof AsmeLibraryIndexRoute
+  '/latam/$country/': typeof LatamCountryIndexRoute
+  '/latam/$country/learn/$id': typeof LatamCountryLearnIdRoute
+  '/latam/$country/library/$id': typeof LatamCountryLibraryIdRoute
+  '/latam/$country/learn/': typeof LatamCountryLearnIndexRoute
+  '/latam/$country/library/': typeof LatamCountryLibraryIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -292,6 +377,7 @@ export interface FileRoutesByTo {
   '/sponsors/$id': typeof SponsorsIdRoute
   '/adverts': typeof AdvertsIndexRoute
   '/asme': typeof AsmeIndexRoute
+  '/latam': typeof LatamIndexRoute
   '/learn': typeof LearnIndexRoute
   '/library': typeof LibraryIndexRoute
   '/scenarios': typeof ScenariosIndexRoute
@@ -299,8 +385,15 @@ export interface FileRoutesByTo {
   '/sponsors': typeof SponsorsIndexRoute
   '/asme/learn/$id': typeof AsmeLearnIdRoute
   '/asme/library/$id': typeof AsmeLibraryIdRoute
+  '/latam/$country/practice': typeof LatamCountryPracticeRoute
+  '/latam/$country/test': typeof LatamCountryTestRoute
   '/asme/learn': typeof AsmeLearnIndexRoute
   '/asme/library': typeof AsmeLibraryIndexRoute
+  '/latam/$country': typeof LatamCountryIndexRoute
+  '/latam/$country/learn/$id': typeof LatamCountryLearnIdRoute
+  '/latam/$country/library/$id': typeof LatamCountryLibraryIdRoute
+  '/latam/$country/learn': typeof LatamCountryLearnIndexRoute
+  '/latam/$country/library': typeof LatamCountryLibraryIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -309,6 +402,7 @@ export interface FileRoutesById {
   '/asme': typeof AsmeRouteWithChildren
   '/classify': typeof ClassifyRoute
   '/drill': typeof DrillRoute
+  '/latam': typeof LatamRouteWithChildren
   '/learn': typeof LearnRouteWithChildren
   '/library': typeof LibraryRouteWithChildren
   '/placement': typeof PlacementRoute
@@ -325,6 +419,7 @@ export interface FileRoutesById {
   '/asme/library': typeof AsmeLibraryRouteWithChildren
   '/asme/practice': typeof AsmePracticeRoute
   '/asme/test': typeof AsmeTestRoute
+  '/latam/$country': typeof LatamCountryRouteWithChildren
   '/learn/$id': typeof LearnIdRoute
   '/library/$id': typeof LibraryIdRoute
   '/scenarios/$id': typeof ScenariosIdRoute
@@ -332,6 +427,7 @@ export interface FileRoutesById {
   '/sponsors/$id': typeof SponsorsIdRoute
   '/adverts/': typeof AdvertsIndexRoute
   '/asme/': typeof AsmeIndexRoute
+  '/latam/': typeof LatamIndexRoute
   '/learn/': typeof LearnIndexRoute
   '/library/': typeof LibraryIndexRoute
   '/scenarios/': typeof ScenariosIndexRoute
@@ -339,8 +435,17 @@ export interface FileRoutesById {
   '/sponsors/': typeof SponsorsIndexRoute
   '/asme/learn/$id': typeof AsmeLearnIdRoute
   '/asme/library/$id': typeof AsmeLibraryIdRoute
+  '/latam/$country/learn': typeof LatamCountryLearnRouteWithChildren
+  '/latam/$country/library': typeof LatamCountryLibraryRouteWithChildren
+  '/latam/$country/practice': typeof LatamCountryPracticeRoute
+  '/latam/$country/test': typeof LatamCountryTestRoute
   '/asme/learn/': typeof AsmeLearnIndexRoute
   '/asme/library/': typeof AsmeLibraryIndexRoute
+  '/latam/$country/': typeof LatamCountryIndexRoute
+  '/latam/$country/learn/$id': typeof LatamCountryLearnIdRoute
+  '/latam/$country/library/$id': typeof LatamCountryLibraryIdRoute
+  '/latam/$country/learn/': typeof LatamCountryLearnIndexRoute
+  '/latam/$country/library/': typeof LatamCountryLibraryIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -350,6 +455,7 @@ export interface FileRouteTypes {
     | '/asme'
     | '/classify'
     | '/drill'
+    | '/latam'
     | '/learn'
     | '/library'
     | '/placement'
@@ -366,6 +472,7 @@ export interface FileRouteTypes {
     | '/asme/library'
     | '/asme/practice'
     | '/asme/test'
+    | '/latam/$country'
     | '/learn/$id'
     | '/library/$id'
     | '/scenarios/$id'
@@ -373,6 +480,7 @@ export interface FileRouteTypes {
     | '/sponsors/$id'
     | '/adverts/'
     | '/asme/'
+    | '/latam/'
     | '/learn/'
     | '/library/'
     | '/scenarios/'
@@ -380,8 +488,17 @@ export interface FileRouteTypes {
     | '/sponsors/'
     | '/asme/learn/$id'
     | '/asme/library/$id'
+    | '/latam/$country/learn'
+    | '/latam/$country/library'
+    | '/latam/$country/practice'
+    | '/latam/$country/test'
     | '/asme/learn/'
     | '/asme/library/'
+    | '/latam/$country/'
+    | '/latam/$country/learn/$id'
+    | '/latam/$country/library/$id'
+    | '/latam/$country/learn/'
+    | '/latam/$country/library/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -403,6 +520,7 @@ export interface FileRouteTypes {
     | '/sponsors/$id'
     | '/adverts'
     | '/asme'
+    | '/latam'
     | '/learn'
     | '/library'
     | '/scenarios'
@@ -410,8 +528,15 @@ export interface FileRouteTypes {
     | '/sponsors'
     | '/asme/learn/$id'
     | '/asme/library/$id'
+    | '/latam/$country/practice'
+    | '/latam/$country/test'
     | '/asme/learn'
     | '/asme/library'
+    | '/latam/$country'
+    | '/latam/$country/learn/$id'
+    | '/latam/$country/library/$id'
+    | '/latam/$country/learn'
+    | '/latam/$country/library'
   id:
     | '__root__'
     | '/'
@@ -419,6 +544,7 @@ export interface FileRouteTypes {
     | '/asme'
     | '/classify'
     | '/drill'
+    | '/latam'
     | '/learn'
     | '/library'
     | '/placement'
@@ -435,6 +561,7 @@ export interface FileRouteTypes {
     | '/asme/library'
     | '/asme/practice'
     | '/asme/test'
+    | '/latam/$country'
     | '/learn/$id'
     | '/library/$id'
     | '/scenarios/$id'
@@ -442,6 +569,7 @@ export interface FileRouteTypes {
     | '/sponsors/$id'
     | '/adverts/'
     | '/asme/'
+    | '/latam/'
     | '/learn/'
     | '/library/'
     | '/scenarios/'
@@ -449,8 +577,17 @@ export interface FileRouteTypes {
     | '/sponsors/'
     | '/asme/learn/$id'
     | '/asme/library/$id'
+    | '/latam/$country/learn'
+    | '/latam/$country/library'
+    | '/latam/$country/practice'
+    | '/latam/$country/test'
     | '/asme/learn/'
     | '/asme/library/'
+    | '/latam/$country/'
+    | '/latam/$country/learn/$id'
+    | '/latam/$country/library/$id'
+    | '/latam/$country/learn/'
+    | '/latam/$country/library/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -459,6 +596,7 @@ export interface RootRouteChildren {
   AsmeRoute: typeof AsmeRouteWithChildren
   ClassifyRoute: typeof ClassifyRoute
   DrillRoute: typeof DrillRoute
+  LatamRoute: typeof LatamRouteWithChildren
   LearnRoute: typeof LearnRouteWithChildren
   LibraryRoute: typeof LibraryRouteWithChildren
   PlacementRoute: typeof PlacementRoute
@@ -507,6 +645,13 @@ declare module '@tanstack/react-router' {
       path: '/drill'
       fullPath: '/drill'
       preLoaderRoute: typeof DrillRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/latam': {
+      id: '/latam'
+      path: '/latam'
+      fullPath: '/latam'
+      preLoaderRoute: typeof LatamRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/learn': {
@@ -635,6 +780,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AsmeTestRouteImport
       parentRoute: typeof AsmeRoute
     }
+    '/latam/': {
+      id: '/latam/'
+      path: '/'
+      fullPath: '/latam/'
+      preLoaderRoute: typeof LatamIndexRouteImport
+      parentRoute: typeof LatamRoute
+    }
+    '/latam/$country': {
+      id: '/latam/$country'
+      path: '/$country'
+      fullPath: '/latam/$country'
+      preLoaderRoute: typeof LatamCountryRouteImport
+      parentRoute: typeof LatamRoute
+    }
     '/learn/': {
       id: '/learn/'
       path: '/'
@@ -733,6 +892,69 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AsmeLibraryIdRouteImport
       parentRoute: typeof AsmeLibraryRoute
     }
+    '/latam/$country/': {
+      id: '/latam/$country/'
+      path: '/'
+      fullPath: '/latam/$country/'
+      preLoaderRoute: typeof LatamCountryIndexRouteImport
+      parentRoute: typeof LatamCountryRoute
+    }
+    '/latam/$country/learn': {
+      id: '/latam/$country/learn'
+      path: '/learn'
+      fullPath: '/latam/$country/learn'
+      preLoaderRoute: typeof LatamCountryLearnRouteImport
+      parentRoute: typeof LatamCountryRoute
+    }
+    '/latam/$country/library': {
+      id: '/latam/$country/library'
+      path: '/library'
+      fullPath: '/latam/$country/library'
+      preLoaderRoute: typeof LatamCountryLibraryRouteImport
+      parentRoute: typeof LatamCountryRoute
+    }
+    '/latam/$country/practice': {
+      id: '/latam/$country/practice'
+      path: '/practice'
+      fullPath: '/latam/$country/practice'
+      preLoaderRoute: typeof LatamCountryPracticeRouteImport
+      parentRoute: typeof LatamCountryRoute
+    }
+    '/latam/$country/test': {
+      id: '/latam/$country/test'
+      path: '/test'
+      fullPath: '/latam/$country/test'
+      preLoaderRoute: typeof LatamCountryTestRouteImport
+      parentRoute: typeof LatamCountryRoute
+    }
+    '/latam/$country/learn/': {
+      id: '/latam/$country/learn/'
+      path: '/'
+      fullPath: '/latam/$country/learn/'
+      preLoaderRoute: typeof LatamCountryLearnIndexRouteImport
+      parentRoute: typeof LatamCountryLearnRoute
+    }
+    '/latam/$country/learn/$id': {
+      id: '/latam/$country/learn/$id'
+      path: '/$id'
+      fullPath: '/latam/$country/learn/$id'
+      preLoaderRoute: typeof LatamCountryLearnIdRouteImport
+      parentRoute: typeof LatamCountryLearnRoute
+    }
+    '/latam/$country/library/': {
+      id: '/latam/$country/library/'
+      path: '/'
+      fullPath: '/latam/$country/library/'
+      preLoaderRoute: typeof LatamCountryLibraryIndexRouteImport
+      parentRoute: typeof LatamCountryLibraryRoute
+    }
+    '/latam/$country/library/$id': {
+      id: '/latam/$country/library/$id'
+      path: '/$id'
+      fullPath: '/latam/$country/library/$id'
+      preLoaderRoute: typeof LatamCountryLibraryIdRouteImport
+      parentRoute: typeof LatamCountryLibraryRoute
+    }
   }
 }
 
@@ -794,6 +1016,64 @@ const AsmeRouteChildren: AsmeRouteChildren = {
 }
 
 const AsmeRouteWithChildren = AsmeRoute._addFileChildren(AsmeRouteChildren)
+
+interface LatamCountryLearnRouteChildren {
+  LatamCountryLearnIdRoute: typeof LatamCountryLearnIdRoute
+  LatamCountryLearnIndexRoute: typeof LatamCountryLearnIndexRoute
+}
+
+const LatamCountryLearnRouteChildren: LatamCountryLearnRouteChildren = {
+  LatamCountryLearnIdRoute: LatamCountryLearnIdRoute,
+  LatamCountryLearnIndexRoute: LatamCountryLearnIndexRoute,
+}
+
+const LatamCountryLearnRouteWithChildren =
+  LatamCountryLearnRoute._addFileChildren(LatamCountryLearnRouteChildren)
+
+interface LatamCountryLibraryRouteChildren {
+  LatamCountryLibraryIdRoute: typeof LatamCountryLibraryIdRoute
+  LatamCountryLibraryIndexRoute: typeof LatamCountryLibraryIndexRoute
+}
+
+const LatamCountryLibraryRouteChildren: LatamCountryLibraryRouteChildren = {
+  LatamCountryLibraryIdRoute: LatamCountryLibraryIdRoute,
+  LatamCountryLibraryIndexRoute: LatamCountryLibraryIndexRoute,
+}
+
+const LatamCountryLibraryRouteWithChildren =
+  LatamCountryLibraryRoute._addFileChildren(LatamCountryLibraryRouteChildren)
+
+interface LatamCountryRouteChildren {
+  LatamCountryLearnRoute: typeof LatamCountryLearnRouteWithChildren
+  LatamCountryLibraryRoute: typeof LatamCountryLibraryRouteWithChildren
+  LatamCountryPracticeRoute: typeof LatamCountryPracticeRoute
+  LatamCountryTestRoute: typeof LatamCountryTestRoute
+  LatamCountryIndexRoute: typeof LatamCountryIndexRoute
+}
+
+const LatamCountryRouteChildren: LatamCountryRouteChildren = {
+  LatamCountryLearnRoute: LatamCountryLearnRouteWithChildren,
+  LatamCountryLibraryRoute: LatamCountryLibraryRouteWithChildren,
+  LatamCountryPracticeRoute: LatamCountryPracticeRoute,
+  LatamCountryTestRoute: LatamCountryTestRoute,
+  LatamCountryIndexRoute: LatamCountryIndexRoute,
+}
+
+const LatamCountryRouteWithChildren = LatamCountryRoute._addFileChildren(
+  LatamCountryRouteChildren,
+)
+
+interface LatamRouteChildren {
+  LatamCountryRoute: typeof LatamCountryRouteWithChildren
+  LatamIndexRoute: typeof LatamIndexRoute
+}
+
+const LatamRouteChildren: LatamRouteChildren = {
+  LatamCountryRoute: LatamCountryRouteWithChildren,
+  LatamIndexRoute: LatamIndexRoute,
+}
+
+const LatamRouteWithChildren = LatamRoute._addFileChildren(LatamRouteChildren)
 
 interface LearnRouteChildren {
   LearnIdRoute: typeof LearnIdRoute
@@ -866,6 +1146,7 @@ const rootRouteChildren: RootRouteChildren = {
   AsmeRoute: AsmeRouteWithChildren,
   ClassifyRoute: ClassifyRoute,
   DrillRoute: DrillRoute,
+  LatamRoute: LatamRouteWithChildren,
   LearnRoute: LearnRouteWithChildren,
   LibraryRoute: LibraryRouteWithChildren,
   PlacementRoute: PlacementRoute,

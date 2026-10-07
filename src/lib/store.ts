@@ -33,9 +33,17 @@ type Progress = {
   placementDone: boolean;
   displayName: string;
   codeRegion: CodeRegion;
+  latamMastery: Record<string, number>;
+  latamRecent: Record<string, string[]>;
   markAnswer: (opts: {
     questionId: string;
     skillId: SkillId;
+    correct: boolean;
+    firstTry: boolean;
+  }) => void;
+  markLatamAnswer: (opts: {
+    slug: string;
+    questionId: string;
     correct: boolean;
     firstTry: boolean;
   }) => void;
@@ -62,6 +70,8 @@ const empty = {
   placementDone: false,
   displayName: "",
   codeRegion: "eu" as CodeRegion,
+  latamMastery: {} as Record<string, number>,
+  latamRecent: {} as Record<string, string[]>,
 };
 
 function today() {
@@ -101,6 +111,22 @@ export const useProgress = create<Progress>()(
           answers: s.answers + 1,
           correct: s.correct + (correct ? 1 : 0),
           streak,
+          lastActiveDay: today(),
+        });
+      },
+      markLatamAnswer: ({ slug, questionId, correct, firstTry }) => {
+        const s = get();
+        const key = `${slug}:${questionId}`;
+        const mastery = s.latamMastery ?? {};
+        const recentMap = s.latamRecent ?? {};
+        const pL = observe(mastery[key] ?? 0.22, correct);
+        const card = reviewSm2(s.sm2[`latam:${key}`], qualityFrom(correct, firstTry));
+        const recent = [...(recentMap[slug] ?? []), questionId].slice(-12);
+        set({
+          latamMastery: { ...mastery, [key]: pL },
+          sm2: { ...s.sm2, [`latam:${key}`]: card },
+          latamRecent: { ...recentMap, [slug]: recent },
+          streak: nextStreak(s.lastActiveDay, s.streak),
           lastActiveDay: today(),
         });
       },
@@ -160,6 +186,8 @@ export const useProgress = create<Progress>()(
         placementDone: s.placementDone,
         displayName: s.displayName,
         codeRegion: s.codeRegion,
+        latamMastery: s.latamMastery,
+        latamRecent: s.latamRecent,
       }),
     },
   ),

@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { S as require_jsx_runtime, Y as require_react, b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as cn } from "./utils-DDI7QxNU.mjs";
-import { g as SHAFT_HOTSPOTS } from "./router-2O5coh7U.mjs";
+import { C as SHAFT_HOTSPOTS } from "./router-B4HJ06iu.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/uk-shaft-NPwq2iie.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();

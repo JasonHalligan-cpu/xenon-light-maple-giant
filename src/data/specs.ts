@@ -139,23 +139,23 @@ export const LIFT_SPECS: LiftSpec[] = [
         statute:
           "EN 81-70 Type 2 is intended for a wheelchair user with an accompanying person. Minimum car 1100 mm wide by 1400 mm deep, rated load 630 kg, door clear opening 900 mm.",
         plain:
-          "This is the car you specify for a public landing. A wheelchair turns, someone can stand beside it, and the door is a proper 900 mm.",
+          "This is the car you specify for a public landing. A wheelchair user and one other person fit. The wheelchair does not turn round in it. The door is a proper 900 mm.",
       },
       {
         item: "Type 1 car",
-        typical: "450 kg · 1000 × 1250 mm · 800 mm door",
+        typical: "450 kg · 1000 × 1300 mm · 800 mm door",
         statute:
-          "Type 1 is the smallest 70 car: 450 kg, 1000 × 1250 mm, 800 mm door. It is a single wheelchair user, tight.",
+          "Type 1 is the smallest 70 car: 450 kg, 1000 × 1300 mm, 800 mm door. It is one wheelchair user, with no accompanying person. It is only for an existing building that cannot take a Type 2.",
         plain:
           "A small residential shaft, not a hospital. If the fire strategy or Part M expects a wheelchair and a helper, Type 1 is the wrong box.",
       },
       {
         item: "Type 3 / stretcher",
-        typical: "1275 kg · 1400 × 1600 mm · 1100 mm door",
+        typical: "1000 kg · 1100 × 2100 mm · 900 mm door",
         statute:
-          "Type 3 is for a wheelchair user with several accompanying persons; 1275 kg, 1400 × 1600 mm, 1100 mm door. Stretcher use is a separate, larger conversation.",
+          "Type 3 is 1100 mm wide by 2100 mm deep, 1000 kg, with a 900 mm door. It takes a wheelchair user and other people, and it takes a stretcher.",
         plain:
-          "Healthcare, stadiums, anywhere a crowd of people and a chair share the car. Write Type 3 if that is the plot — do not hope a Type 2 stretches.",
+          "This is the stretcher car. Write Type 3 if a stretcher has to go in. Do not hope a Type 2 stretches. A wheelchair that must turn round is Type 4 or Type 5, not Type 3.",
       },
       {
         item: "Controls",

@@ -2,7 +2,7 @@ import { S as require_jsx_runtime, b as Link } from "../_libs/@tanstack/react-ro
 import { n as cn } from "./utils-DDI7QxNU.mjs";
 import { n as buttonVariants } from "./button-BjXN1-zk.mjs";
 import { t as StatuteSplit } from "./statute-split-D_ikWagS.mjs";
-import { _ as UkLayers } from "./router-2O5coh7U.mjs";
+import { w as UkLayers } from "./router-B4HJ06iu.mjs";
 import { n as UkShaft, t as ThreeLifts } from "./uk-shaft-NPwq2iie.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/uk-BYGPKGqQ.js
 var import_jsx_runtime = require_jsx_runtime();

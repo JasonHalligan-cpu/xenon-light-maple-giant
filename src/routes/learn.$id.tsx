@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import { useProgress } from "@/lib/store";
 import type { CodeRegion, StandardId } from "@/data/types";
 import { AdSlot } from "@/components/ads/ad-slot";
+import { BackLink, NextLink, PageArrows } from "@/components/layout/page-arrows";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/learn/$id")({
@@ -44,28 +45,44 @@ const ART: Partial<Record<StandardId, { src: string; alt: string }>> = {
     alt: "Empty standard passenger elevator with doors open",
   },
   "a17-1": {
-    src: "/graphics/car-ordinary-j.jpg",
-    alt: "Empty standard passenger elevator with doors open",
+    src: "/graphics/asme-lobby.jpg",
+    alt: "Modern North American elevator lobby with stainless doors and a city skyline",
+  },
+  "asme-ahj": {
+    src: "/graphics/asme-inspect.jpg",
+    alt: "Inspector checking an elevator landing door with a flashlight",
+  },
+  "a17-2": {
+    src: "/graphics/asme-inspect.jpg",
+    alt: "Inspector checking an elevator landing door with a flashlight",
+  },
+  "a17-3": {
+    src: "/graphics/asme-existing.jpg",
+    alt: "Older passenger elevator still in use, with worn metal walls",
   },
   "asme-ada": {
-    src: "/graphics/car-ordinary-j.jpg",
-    alt: "Empty standard passenger elevator with doors open",
+    src: "/graphics/asme-oeo.jpg",
+    alt: "Wheelchair user inside a large elevator with the doors open",
   },
   "asme-phase1": {
-    src: "/graphics/car-ordinary-j.jpg",
-    alt: "Empty standard passenger elevator with doors open",
+    src: "/graphics/asme-phase1.jpg",
+    alt: "Empty elevator parked at the lobby under amber emergency light",
   },
   "asme-phase2": {
-    src: "/graphics/car-firefighter-o.jpg",
-    alt: "Firefighter in protective kit inside a firefighters elevator with a key panel and a wet floor",
+    src: "/graphics/asme-phase2.jpg",
+    alt: "Firefighter using a key switch inside an elevator",
   },
   "asme-fsae": {
-    src: "/graphics/car-firefighter-o.jpg",
-    alt: "Firefighter in protective kit inside a firefighters elevator with a key panel and a wet floor",
+    src: "/graphics/asme-phase2.jpg",
+    alt: "Firefighter using a key switch inside an elevator",
   },
   "asme-oeo": {
-    src: "/graphics/car-evac-i.jpg",
-    alt: "Person in a wheelchair inside an evacuation elevator with a large clear floor",
+    src: "/graphics/asme-oeo.jpg",
+    alt: "Wheelchair user inside a large elevator with the doors open",
+  },
+  "asme-ibc": {
+    src: "/graphics/asme-lobby.jpg",
+    alt: "Modern North American elevator lobby with stainless doors and a city skyline",
   },
   loler: {
     src: "/graphics/loler-machine.jpg",
@@ -119,8 +136,10 @@ export function LessonFloor({ id, region }: { id: string; region: CodeRegion }) 
   const art = artFor(lesson.standardIds, lesson.region ?? "eu");
   const totalSteps = lesson.sections.length;
   const track = LESSONS.filter((item) => (item.region ?? "eu") === (lesson.region ?? "eu"));
-  const nextLesson = track[track.findIndex((item) => item.id === id) + 1];
   const lessonIndex = track.findIndex((item) => item.id === id);
+  const prevLesson = lessonIndex > 0 ? track[lessonIndex - 1] : undefined;
+  const nextLesson =
+    lessonIndex >= 0 && lessonIndex < track.length - 1 ? track[lessonIndex + 1] : undefined;
   const curriculum = [
     { mark: "G", name: "Lobby" },
     ...track.map((item, i) => ({
@@ -137,6 +156,26 @@ export function LessonFloor({ id, region }: { id: string; region: CodeRegion }) 
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      <PageArrows
+        back={
+          prevLesson ? (
+            region === "asme" ? (
+              <BackLink to="/asme/learn/$id" params={{ id: prevLesson.id }} />
+            ) : (
+              <BackLink to="/learn/$id" params={{ id: prevLesson.id }} />
+            )
+          ) : null
+        }
+        next={
+          nextLesson ? (
+            region === "asme" ? (
+              <NextLink to="/asme/learn/$id" params={{ id: nextLesson.id }} />
+            ) : (
+              <NextLink to="/learn/$id" params={{ id: nextLesson.id }} />
+            )
+          ) : null
+        }
+      />
       <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
       <div className="order-2 min-w-0 lg:order-1 lg:col-span-8">
       <p className="text-sm font-medium uppercase tracking-wider text-accent">
@@ -174,33 +213,6 @@ export function LessonFloor({ id, region }: { id: string; region: CodeRegion }) 
             ) : (
               <Link to="/practice" className={buttonVariants()}>
                 Practice this skill
-              </Link>
-            )}
-            {nextLesson ? (
-              region === "asme" ? (
-                <Link
-                  to="/asme/learn/$id"
-                  params={{ id: nextLesson.id }}
-                  className={buttonVariants({ variant: "secondary" })}
-                >
-                  Next floor
-                </Link>
-              ) : (
-                <Link
-                  to="/learn/$id"
-                  params={{ id: nextLesson.id }}
-                  className={buttonVariants({ variant: "secondary" })}
-                >
-                  Next floor
-                </Link>
-              )
-            ) : region === "asme" ? (
-              <Link to="/asme/learn" className={buttonVariants({ variant: "secondary" })}>
-                All lessons
-              </Link>
-            ) : (
-              <Link to="/learn" className={buttonVariants({ variant: "secondary" })}>
-                All lessons
               </Link>
             )}
           </div>

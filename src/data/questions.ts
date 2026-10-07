@@ -723,7 +723,7 @@ export const QUESTIONS: Question[] = [
     statute:
       "The Construction (Design and Management) Regulations 2015 apply to construction work, including installation and substantial alteration of an elevator.",
     plain: "Design the danger out. Do not leave it to the people doing the work.",
-    why: "This duty applies when the elevator is put in, or changed in a big way. A normal repair visit is not this duty.",
+    why: "Installation and alteration are construction work. Repair and upkeep can be too. A routine fault reset is not a construction project.",
   },
   {
     id: "q-reg-wah",
